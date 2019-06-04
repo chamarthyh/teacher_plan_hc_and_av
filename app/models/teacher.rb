@@ -1,6 +1,9 @@
 class Teacher < ApplicationRecord
   # Direct associations
 
+  has_many   :plans,
+             :dependent => :destroy
+
   # Indirect associations
 
   # Validations
