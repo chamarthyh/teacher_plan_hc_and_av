@@ -46,7 +46,7 @@ class PlansController < ApplicationController
     @plan = Plan.find(params.fetch("id_to_modify"))
 
     @plan.plan_name = params.fetch("plan_name")
-    @plan.teacher_id = params.fetch("teacher_id")
+    
     @plan.coach_id = params.fetch("coach_id")
     @plan.status = params.fetch("status")
 

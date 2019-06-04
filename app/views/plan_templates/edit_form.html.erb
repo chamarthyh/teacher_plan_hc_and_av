@@ -21,15 +21,6 @@
   <!-- Label and input for plan_name end -->
 
   <!-- Label and input for teacher_id start -->
-  <div class="form-group">
-    <label for="teacher_id">
-      Teacher
-    </label>
-
-    <!-- Input for teacher_id start -->
-    <%= select_tag(:teacher_id, options_from_collection_for_select(Teacher.all, :id, :created_at, @plan.teacher_id), :class => "form-control") %>
-    <!-- Input for teacher_id end -->
-  </div>
   <!-- Label and input for teacher_id end -->
 
   <!-- Label and input for coach_id start -->
