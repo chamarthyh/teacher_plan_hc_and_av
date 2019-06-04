@@ -10,7 +10,8 @@ class PlansController < ApplicationController
   end
 
   def index
-    @plans = Plan.page(params[:page]).per(10)
+    @q = Plan.ransack(params[:q])
+    @plans = @q.result(:distinct => true).includes(:teacher, :goals, :plans_to_coaches, :coaches).page(params[:page]).per(10)
 
     render("plan_templates/index.html.erb")
   end
