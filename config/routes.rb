@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "plans#index"
   # Routes for the Plans to coach resource:
 
   # CREATE
