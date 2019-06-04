@@ -72,7 +72,11 @@
 
         <!-- Display plan.teacher_id start -->
         <td>
-          <%= plan.teacher.created_at %>
+          <% if plan.teacher.present? %>
+            <a href="/teachers/<%= plan.teacher.id %>">
+              <%= plan.teacher.created_at %>
+            </a>
+          <% end %>
         </td>
         <!-- Display plan.teacher_id end -->
 

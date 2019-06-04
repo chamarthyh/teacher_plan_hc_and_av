@@ -47,7 +47,11 @@
       </dt>
       <!-- Display teacher_id start -->
       <dd>
-        <%= @plan.teacher_id %>
+        <% if @plan.teacher.present? %>
+          <a href="/teachers/<%= @plan.teacher_id %>">
+            <%= @plan.teacher.created_at %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display teacher_id end -->
 

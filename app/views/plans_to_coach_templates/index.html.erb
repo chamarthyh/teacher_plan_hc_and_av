@@ -58,13 +58,21 @@
 
         <!-- Display plans_to_coach.plan_id start -->
         <td>
-          <%= plans_to_coach.plan.plan_name %>
+          <% if plans_to_coach.plan.present? %>
+            <a href="/plans/<%= plans_to_coach.plan.id %>">
+              <%= plans_to_coach.plan.plan_name %>
+            </a>
+          <% end %>
         </td>
         <!-- Display plans_to_coach.plan_id end -->
 
         <!-- Display plans_to_coach.coach_id start -->
         <td>
-          <%= plans_to_coach.coach.email %>
+          <% if plans_to_coach.coach.present? %>
+            <a href="/coaches/<%= plans_to_coach.coach.id %>">
+              <%= plans_to_coach.coach.email %>
+            </a>
+          <% end %>
         </td>
         <!-- Display plans_to_coach.coach_id end -->
 
