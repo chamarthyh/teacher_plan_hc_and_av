@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  devise_for :coaches
+  # Routes for the Coach resource:
+
+  # READ
+  get("/coaches", { :controller => "coaches", :action => "index" })
+  get("/coaches/:id_to_display", { :controller => "coaches", :action => "show" })
+
+  #------------------------------
+
   devise_for :teachers
   # Routes for the Teacher resource:
 

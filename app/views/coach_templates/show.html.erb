@@ -1,0 +1,66 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Coach #<%= @coach.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/coaches" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link coach start -->
+      <div class="col">
+        <a href="/coaches/<%= @coach.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit coach
+        </a>
+      </div>
+      <!-- Edit link coach end -->
+
+    </div>
+
+    <dl>
+      <dt>
+        Email
+      </dt>
+      <!-- Display email start -->
+      <dd>
+        <%= @coach.email %>
+      </dd>
+      <!-- Display email end -->
+
+      <dt>
+        Password
+      </dt>
+      <!-- Display password start -->
+      <dd>
+        <%= @coach.password %>
+      </dd>
+      <!-- Display password end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@coach.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@coach.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
