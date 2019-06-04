@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # CREATE
   get("/plans_to_coaches/new", { :controller => "plans_to_coaches", :action => "new_form" })
   post("/create_plans_to_coach", { :controller => "plans_to_coaches", :action => "create_row" })
+  post("/create_plans_to_coach_from_plan", { :controller => "plans_to_coaches", :action => "create_row_from_plan" })
 
   # READ
   get("/plans_to_coaches", { :controller => "plans_to_coaches", :action => "index" })
@@ -28,6 +29,7 @@ Rails.application.routes.draw do
   # CREATE
   get("/action_steps/new", { :controller => "action_steps", :action => "new_form" })
   post("/create_action_step", { :controller => "action_steps", :action => "create_row" })
+  post("/create_action_step_from_goal", { :controller => "action_steps", :action => "create_row_from_goal" })
 
   # READ
   get("/action_steps", { :controller => "action_steps", :action => "index" })
@@ -48,6 +50,7 @@ Rails.application.routes.draw do
   # CREATE
   get("/goals/new", { :controller => "goals", :action => "new_form" })
   post("/create_goal", { :controller => "goals", :action => "create_row" })
+  post("/create_goal_from_plan", { :controller => "goals", :action => "create_row_from_plan" })
 
   # READ
   get("/goals", { :controller => "goals", :action => "index" })

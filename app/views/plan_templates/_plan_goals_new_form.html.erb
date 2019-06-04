@@ -1,0 +1,25 @@
+<!-- Form goal start -->
+<form action="/create_goal_from_plan" method="post">
+<!-- Form goal end -->
+
+  <!-- Label and input for goal_text start -->
+  <div class="form-group">
+    <label for="goal_text">
+      Goal text
+    </label>
+
+    <!-- Input for goal_text start -->
+    <input type="text" id="goal_text" name="goal_text" class="form-control" value="<%= @goal.goal_text %>">
+    <!-- Input for goal_text end -->
+  </div>
+  <!-- Label and input for goal_text end -->
+
+  <!-- Label and input for plan_id start -->
+  <!-- Input for plan_id start -->
+  <input type="hidden" name="plan_id" value="<%= @plan.id %>">
+  <!-- Input for plan_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create goal
+  </button>
+</form>
