@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Plans to coach resource:
+
+  # CREATE
+  get("/plans_to_coaches/new", { :controller => "plans_to_coaches", :action => "new_form" })
+  post("/create_plans_to_coach", { :controller => "plans_to_coaches", :action => "create_row" })
+
+  # READ
+  get("/plans_to_coaches", { :controller => "plans_to_coaches", :action => "index" })
+  get("/plans_to_coaches/:id_to_display", { :controller => "plans_to_coaches", :action => "show" })
+
+  # UPDATE
+  get("/plans_to_coaches/:prefill_with_id/edit", { :controller => "plans_to_coaches", :action => "edit_form" })
+  post("/update_plans_to_coach/:id_to_modify", { :controller => "plans_to_coaches", :action => "update_row" })
+
+  # DELETE
+  get("/delete_plans_to_coach/:id_to_remove", { :controller => "plans_to_coaches", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Action step resource:
 
   # CREATE

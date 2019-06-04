@@ -1,0 +1,56 @@
+<!-- Validation failure messages -->
+<% if @plans_to_coach.present? %>
+  <% if @plans_to_coach.errors.any? %>
+    <% @plans_to_coach.errors.full_messages.each do |message| %>
+      <div class="alert alert-danger">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h1>
+  Add a new plans to coach
+</h1>
+
+
+<hr>
+
+<!-- Form plans_to_coach start -->
+<form action="/create_plans_to_coach" method="post">
+<!-- Form plans_to_coach end -->
+
+  <!-- Label and input for plan_id start -->
+  <div class="form-group">
+    <label for="plan_id">
+      Plan
+    </label>
+
+    <!-- Input for plan_id start -->
+    <input type="text" id="plan_id" name="plan_id" class="form-control" value="<%= @plans_to_coach.plan_id %>">
+    <!-- Input for plan_id end -->
+  </div>
+  <!-- Label and input for plan_id end -->
+
+  <!-- Label and input for coach_id start -->
+  <div class="form-group">
+    <label for="coach_id">
+      Coach
+    </label>
+
+    <!-- Input for coach_id start -->
+    <input type="text" id="coach_id" name="coach_id" class="form-control" value="<%= @plans_to_coach.coach_id %>">
+    <!-- Input for coach_id end -->
+  </div>
+  <!-- Label and input for coach_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create plans to coach
+  </button>
+</form>
+
+<hr>
+
+<a href="/plans_to_coaches">
+  Go back
+</a>

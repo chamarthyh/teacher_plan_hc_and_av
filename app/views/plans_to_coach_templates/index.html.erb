@@ -1,0 +1,92 @@
+<div class="row mb-3">
+  <div class="col-md-12">
+    <h1>
+      All plans to coaches
+    </h1>
+
+    <a href="/plans_to_coaches/new" class="btn btn-block btn-outline-secondary">
+      Add a new plans to coach
+    </a>
+  </div>
+</div>
+
+<!-- Ransack Code start -->
+
+<!-- Ransack Code end -->
+
+<!-- Location Map Code start -->
+
+<!-- Location Map Code end -->
+
+<hr>
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Plan
+        </th>
+
+        <th>
+          Coach
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @plans_to_coaches.each do |plans_to_coach| %>
+      <tr>
+        <!-- Display plans_to_coach.id start -->
+        <td>
+          <%= plans_to_coach.id %>
+        </td>
+        <!-- Display plans_to_coach.id end -->
+
+        <!-- Display plans_to_coach.plan_id start -->
+        <td>
+          <%= plans_to_coach.plan_id %>
+        </td>
+        <!-- Display plans_to_coach.plan_id end -->
+
+        <!-- Display plans_to_coach.coach_id start -->
+        <td>
+          <%= plans_to_coach.coach_id %>
+        </td>
+        <!-- Display plans_to_coach.coach_id end -->
+
+        <!-- Display plans_to_coach.created_at start -->
+        <td>
+          <%= time_ago_in_words(plans_to_coach.created_at) %> ago
+        </td>
+        <!-- Display plans_to_coach.created_at end -->
+
+        <!-- Display plans_to_coach.updated_at start -->
+        <td>
+          <%= time_ago_in_words(plans_to_coach.updated_at) %> ago
+        </td>
+        <!-- Display plans_to_coach.updated_at end -->
+
+        <td>
+          <a href="/plans_to_coaches/<%= plans_to_coach.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
