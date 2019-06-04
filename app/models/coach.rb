@@ -1,6 +1,9 @@
 class Coach < ApplicationRecord
   # Direct associations
 
+  has_many   :plans_to_coaches,
+             :dependent => :destroy
+
   # Indirect associations
 
   # Validations
