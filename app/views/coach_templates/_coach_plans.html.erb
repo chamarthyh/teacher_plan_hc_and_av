@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-header d-flex align-items-center justify-content-between">
+    Plans
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <% @coach.plans.each do |plan| %>
+      <li class="list-group-item d-flex align-items-center justify-content-between">
+        <!-- Show link start -->
+        <a href="/plans/<%= plan.id %>">
+          <%= plan.plan_name %>
+        </a>
+        <!-- Show link end -->
+
+      </li>
+    <% end %>
+
+  </ul>
+</div>

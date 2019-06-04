@@ -57,6 +57,14 @@ class PlansController < ApplicationController
     end
   end
 
+  def destroy_row_from_teacher
+    @plan = Plan.find(params.fetch("id_to_remove"))
+
+    @plan.destroy
+
+    redirect_to("/teachers/#{@plan.teacher_id}", notice: "Plan deleted successfully.")
+  end
+
   def destroy_row
     @plan = Plan.find(params.fetch("id_to_remove"))
 
