@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @plans_to_coach.errors.any? %>
   <% @plans_to_coach.errors.full_messages.each do |message| %>
     <div class="alert">
@@ -13,33 +12,23 @@
 
 <hr>
 
-<!-- Form plans_to_coach start -->
 <form action="/update_plans_to_coach/<%= @plans_to_coach.id %>" method="post">
-<!-- Form plans_to_coach end -->
 
-  <!-- Label and input for plan_id start -->
   <div class="form-group">
     <label for="plan_id">
       Plan
     </label>
 
-    <!-- Input for plan_id start -->
     <%= select_tag(:plan_id, options_from_collection_for_select(Plan.all, :id, :plan_name, @plans_to_coach.plan_id), :class => "form-control") %>
-    <!-- Input for plan_id end -->
   </div>
-  <!-- Label and input for plan_id end -->
 
-  <!-- Label and input for coach_id start -->
   <div class="form-group">
     <label for="coach_id">
       Coach
     </label>
 
-    <!-- Input for coach_id start -->
     <%= select_tag(:coach_id, options_from_collection_for_select(Coach.all, :id, :email, @plans_to_coach.coach_id), :class => "form-control") %>
-    <!-- Input for coach_id end -->
   </div>
-  <!-- Label and input for coach_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Update plans to coach

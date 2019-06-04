@@ -10,13 +10,9 @@
   </div>
 </div>
 
-<!-- Ransack Code start -->
 
-<!-- Ransack Code end -->
 
-<!-- Location Map Code start -->
 
-<!-- Location Map Code end -->
 
 <hr>
 
@@ -50,35 +46,25 @@
 
       <% @coaches.each do |coach| %>
       <tr>
-        <!-- Display coach.id start -->
         <td>
           <%= coach.id %>
         </td>
-        <!-- Display coach.id end -->
 
-        <!-- Display coach.email start -->
         <td>
           <%= coach.email %>
         </td>
-        <!-- Display coach.email end -->
 
-        <!-- Display coach.password start -->
         <td>
           <%= coach.password %>
         </td>
-        <!-- Display coach.password end -->
 
-        <!-- Display coach.created_at start -->
         <td>
           <%= time_ago_in_words(coach.created_at) %> ago
         </td>
-        <!-- Display coach.created_at end -->
 
-        <!-- Display coach.updated_at start -->
         <td>
           <%= time_ago_in_words(coach.updated_at) %> ago
         </td>
-        <!-- Display coach.updated_at end -->
 
         <td>
           <a href="/coaches/<%= coach.id %>">

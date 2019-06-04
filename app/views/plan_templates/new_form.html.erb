@@ -5,51 +5,33 @@
 
 <hr>
 
-<!-- Form plan start -->
 <form action="/create_plan" method="post">
-<!-- Form plan end -->
 
-  <!-- Label and input for plan_name start -->
   <div class="form-group">
     <label for="plan_name">
       Plan name
     </label>
 
-    <!-- Input for plan_name start -->
     <input type="text" id="plan_name" name="plan_name" class="form-control">
-    <!-- Input for plan_name end -->
   </div>
-  <!-- Label and input for plan_name end -->
 
-  <!-- Label and input for teacher_id start -->
-  <!-- Input for "teacher_id" start -->
   <input type="hidden" name="teacher_id" value="<%= current_teacher.id %>">
-  <!-- Input for "teacher_id" end -->
-  <!-- Label and input for teacher_id end -->
 
-  <!-- Label and input for coach_id start -->
   <div class="form-group">
     <label for="coach_id">
       Coach
     </label>
 
-    <!-- Input for coach_id start -->
     <input type="text" id="coach_id" name="coach_id" class="form-control">
-    <!-- Input for coach_id end -->
   </div>
-  <!-- Label and input for coach_id end -->
 
-  <!-- Label and input for status start -->
   <div class="form-group">
     <label for="status">
       Status
     </label>
 
-    <!-- Input for status start -->
     <input type="text" id="status" name="status" class="form-control">
-    <!-- Input for status end -->
   </div>
-  <!-- Label and input for status end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create plan

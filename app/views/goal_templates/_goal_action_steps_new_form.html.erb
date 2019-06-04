@@ -1,83 +1,54 @@
-<!-- Form action_step start -->
 <form action="/create_action_step_from_goal" method="post">
-<!-- Form action_step end -->
 
-  <!-- Label and input for action_step start -->
   <div class="form-group">
     <label for="action_step">
       Action step
     </label>
 
-    <!-- Input for action_step start -->
     <input type="text" id="action_step" name="action_step" class="form-control" value="<%= @action_step.action_step %>">
-    <!-- Input for action_step end -->
   </div>
-  <!-- Label and input for action_step end -->
 
-  <!-- Label and input for target_date start -->
   <div class="form-group">
     <label for="target_date">
       Target date
     </label>
 
-    <!-- Input for target_date start -->
     <input type="text" id="target_date" name="target_date" class="form-control" value="<%= @action_step.target_date %>">
-    <!-- Input for target_date end -->
   </div>
-  <!-- Label and input for target_date end -->
 
-  <!-- Label and input for lead_person start -->
   <div class="form-group">
     <label for="lead_person">
       Lead person
     </label>
 
-    <!-- Input for lead_person start -->
     <input type="text" id="lead_person" name="lead_person" class="form-control" value="<%= @action_step.lead_person %>">
-    <!-- Input for lead_person end -->
   </div>
-  <!-- Label and input for lead_person end -->
 
-  <!-- Label and input for resources_needed start -->
   <div class="form-group">
     <label for="resources_needed">
       Resources needed
     </label>
 
-    <!-- Input for resources_needed start -->
     <input type="text" id="resources_needed" name="resources_needed" class="form-control" value="<%= @action_step.resources_needed %>">
-    <!-- Input for resources_needed end -->
   </div>
-  <!-- Label and input for resources_needed end -->
 
-  <!-- Label and input for specifics start -->
   <div class="form-group">
     <label for="specifics">
       Specifics
     </label>
 
-    <!-- Input for specifics start -->
     <input type="text" id="specifics" name="specifics" class="form-control" value="<%= @action_step.specifics %>">
-    <!-- Input for specifics end -->
   </div>
-  <!-- Label and input for specifics end -->
 
-  <!-- Label and input for goal_id start -->
-  <!-- Input for goal_id start -->
   <input type="hidden" name="goal_id" value="<%= @goal.id %>">
-  <!-- Input for goal_id end -->
 
-  <!-- Label and input for measures_of_success start -->
   <div class="form-group">
     <label for="measures_of_success">
       Measures of success
     </label>
 
-    <!-- Input for measures_of_success start -->
     <input type="text" id="measures_of_success" name="measures_of_success" class="form-control" value="<%= @action_step.measures_of_success %>">
-    <!-- Input for measures_of_success end -->
   </div>
-  <!-- Label and input for measures_of_success end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create action step

@@ -5,33 +5,23 @@
 
 <hr>
 
-<!-- Form goal start -->
 <form action="/create_goal" method="post">
-<!-- Form goal end -->
 
-  <!-- Label and input for goal_text start -->
   <div class="form-group">
     <label for="goal_text">
       Goal text
     </label>
 
-    <!-- Input for goal_text start -->
     <input type="text" id="goal_text" name="goal_text" class="form-control">
-    <!-- Input for goal_text end -->
   </div>
-  <!-- Label and input for goal_text end -->
 
-  <!-- Label and input for plan_id start -->
   <div class="form-group">
     <label for="plan_id">
       Plan
     </label>
 
-    <!-- Input for plan_id start -->
     <%= select_tag(:plan_id, options_from_collection_for_select(Plan.all, :id, :plan_name, @goal.plan_id), :class => "form-control") %>
-    <!-- Input for plan_id end -->
   </div>
-  <!-- Label and input for plan_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create goal

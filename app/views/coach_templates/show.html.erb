@@ -11,13 +11,11 @@
         </a>
       </div>
 
-      <!-- Edit link coach start -->
       <div class="col">
         <a href="/coaches/<%= @coach.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit coach
         </a>
       </div>
-      <!-- Edit link coach end -->
 
     </div>
 
@@ -25,43 +23,34 @@
       <dt>
         Email
       </dt>
-      <!-- Display email start -->
       <dd>
         <%= @coach.email %>
       </dd>
-      <!-- Display email end -->
 
       <dt>
         Password
       </dt>
-      <!-- Display password start -->
       <dd>
         <%= @coach.password %>
       </dd>
-      <!-- Display password end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@coach.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@coach.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "coach_templates/coach_plans_to_coaches" %>
@@ -73,4 +62,3 @@
     <%= render partial: "coach_templates/coach_plans" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

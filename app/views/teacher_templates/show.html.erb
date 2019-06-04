@@ -11,13 +11,11 @@
         </a>
       </div>
 
-      <!-- Edit link teacher start -->
       <div class="col">
         <a href="/teachers/<%= @teacher.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit teacher
         </a>
       </div>
-      <!-- Edit link teacher end -->
 
     </div>
 
@@ -25,46 +23,36 @@
       <dt>
         Email
       </dt>
-      <!-- Display email start -->
       <dd>
         <%= @teacher.email %>
       </dd>
-      <!-- Display email end -->
 
       <dt>
         Password
       </dt>
-      <!-- Display password start -->
       <dd>
         <%= @teacher.password %>
       </dd>
-      <!-- Display password end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@teacher.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@teacher.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "teacher_templates/teacher_plans" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

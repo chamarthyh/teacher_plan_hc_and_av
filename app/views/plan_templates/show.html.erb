@@ -11,7 +11,6 @@
         </a>
       </div>
 
-      <!-- Edit link plan start -->
       <div class="col">
         <% if current_teacher == @plan.teacher %>
           <a href="/plans/<%= @plan.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
@@ -19,9 +18,7 @@
           </a>
         <% end %>
       </div>
-      <!-- Edit link plan end -->
 
-      <!-- Delete link plan start -->
       <div class="col">
         <% if current_teacher == @plan.teacher %>
           <a href="/delete_plan/<%= @plan.id %>" class="btn btn-block btn-sm btn-outline-secondary">
@@ -29,23 +26,19 @@
           </a>
         <% end %>
       </div>
-      <!-- Delete link plan end -->
     </div>
 
     <dl>
       <dt>
         Plan name
       </dt>
-      <!-- Display plan_name start -->
       <dd>
         <%= @plan.plan_name %>
       </dd>
-      <!-- Display plan_name end -->
 
       <dt>
         Teacher
       </dt>
-      <!-- Display teacher_id start -->
       <dd>
         <% if @plan.teacher.present? %>
           <a href="/teachers/<%= @plan.teacher_id %>">
@@ -53,48 +46,38 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display teacher_id end -->
 
       <dt>
         Coach
       </dt>
-      <!-- Display coach_id start -->
       <dd>
         <%= @plan.coach_id %>
       </dd>
-      <!-- Display coach_id end -->
 
       <dt>
         Status
       </dt>
-      <!-- Display status start -->
       <dd>
         <%= @plan.status %>
       </dd>
-      <!-- Display status end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@plan.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@plan.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "plan_templates/plan_goals" %>
@@ -112,4 +95,3 @@
     <%= render partial: "plan_templates/plan_coaches" %>
   </div>
 </div>
-<!-- Show Page Customization end -->
