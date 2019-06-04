@@ -13,17 +13,21 @@
 
       <!-- Edit link plan start -->
       <div class="col">
-        <a href="/plans/<%= @plan.id %>/edit" class="btn btn-block btn-outline-secondary">
-          Edit plan
-        </a>
+        <% if current_teacher == @plan.teacher %>
+          <a href="/plans/<%= @plan.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
+            Edit plan
+          </a>
+        <% end %>
       </div>
       <!-- Edit link plan end -->
 
       <!-- Delete link plan start -->
       <div class="col">
-        <a href="/delete_plan/<%= @plan.id %>" class="btn btn-block btn-outline-secondary">
-          Delete plan
-        </a>
+        <% if current_teacher == @plan.teacher %>
+          <a href="/delete_plan/<%= @plan.id %>" class="btn btn-block btn-sm btn-outline-secondary">
+            Delete plan
+          </a>
+        <% end %>
       </div>
       <!-- Delete link plan end -->
     </div>
