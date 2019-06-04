@@ -1,4 +1,6 @@
 ActiveAdmin.register Plan do
+
+ permit_params :plan_name, :teacher_id, :coach_id, :status
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
