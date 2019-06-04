@@ -1,0 +1,91 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Plan #<%= @plan.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/plans" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link plan start -->
+      <div class="col">
+        <a href="/plans/<%= @plan.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit plan
+        </a>
+      </div>
+      <!-- Edit link plan end -->
+
+      <!-- Delete link plan start -->
+      <div class="col">
+        <a href="/delete_plan/<%= @plan.id %>" class="btn btn-block btn-outline-secondary">
+          Delete plan
+        </a>
+      </div>
+      <!-- Delete link plan end -->
+    </div>
+
+    <dl>
+      <dt>
+        Plan name
+      </dt>
+      <!-- Display plan_name start -->
+      <dd>
+        <%= @plan.plan_name %>
+      </dd>
+      <!-- Display plan_name end -->
+
+      <dt>
+        Teacher
+      </dt>
+      <!-- Display teacher_id start -->
+      <dd>
+        <%= @plan.teacher_id %>
+      </dd>
+      <!-- Display teacher_id end -->
+
+      <dt>
+        Coach
+      </dt>
+      <!-- Display coach_id start -->
+      <dd>
+        <%= @plan.coach_id %>
+      </dd>
+      <!-- Display coach_id end -->
+
+      <dt>
+        Status
+      </dt>
+      <!-- Display status start -->
+      <dd>
+        <%= @plan.status %>
+      </dd>
+      <!-- Display status end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@plan.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@plan.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->

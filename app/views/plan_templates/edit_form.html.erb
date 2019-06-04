@@ -1,0 +1,68 @@
+<h1>
+  Edit plan #<%= @plan.id %>
+</h1>
+
+<hr>
+
+<!-- Form plan start -->
+<form action="/update_plan/<%= @plan.id %>" method="post">
+<!-- Form plan end -->
+
+  <!-- Label and input for plan_name start -->
+  <div class="form-group">
+    <label for="plan_name">
+      Plan name
+    </label>
+
+    <!-- Input for plan_name start -->
+    <input type="text" id="plan_name" name="plan_name" class="form-control" value="<%= @plan.plan_name %>">
+    <!-- Input for plan_name end -->
+  </div>
+  <!-- Label and input for plan_name end -->
+
+  <!-- Label and input for teacher_id start -->
+  <div class="form-group">
+    <label for="teacher_id">
+      Teacher
+    </label>
+
+    <!-- Input for teacher_id start -->
+    <input type="text" id="teacher_id" name="teacher_id" class="form-control" value="<%= @plan.teacher_id %>">
+    <!-- Input for teacher_id end -->
+  </div>
+  <!-- Label and input for teacher_id end -->
+
+  <!-- Label and input for coach_id start -->
+  <div class="form-group">
+    <label for="coach_id">
+      Coach
+    </label>
+
+    <!-- Input for coach_id start -->
+    <input type="text" id="coach_id" name="coach_id" class="form-control" value="<%= @plan.coach_id %>">
+    <!-- Input for coach_id end -->
+  </div>
+  <!-- Label and input for coach_id end -->
+
+  <!-- Label and input for status start -->
+  <div class="form-group">
+    <label for="status">
+      Status
+    </label>
+
+    <!-- Input for status start -->
+    <input type="text" id="status" name="status" class="form-control" value="<%= @plan.status %>">
+    <!-- Input for status end -->
+  </div>
+  <!-- Label and input for status end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update plan
+  </button>
+</form>
+
+<hr>
+
+<a href="/plans">
+  Go back
+</a>
