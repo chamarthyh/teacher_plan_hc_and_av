@@ -6,6 +6,10 @@ class Coach < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :plans,
+             :through => :plans_to_coaches,
+             :source => :plan
+
   # Validations
 
   # Include default devise modules. Others available are:

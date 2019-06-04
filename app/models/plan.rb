@@ -11,6 +11,10 @@ class Plan < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :coaches,
+             :through => :plans_to_coaches,
+             :source => :coach
+
   # Validations
 
 end

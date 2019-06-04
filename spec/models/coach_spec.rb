@@ -10,6 +10,8 @@ RSpec.describe Coach, type: :model do
 
     describe "InDirect Associations" do
 
+    it { should have_many(:plans) }
+
     end
 
     describe "Validations" do
